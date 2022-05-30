@@ -38,7 +38,7 @@ const Pagination = ({limitSet,pageSet,page,productslist,products,limit}) => {
       }}>Next</Button>} 
       <Button data-cy="pagination-last-button" 
       onClick={()=>{
-        pageSet(products.length/limit)
+        pageSet(productslist.length/limit)
       }}
       >Last</Button>
     </ButtonGroup>

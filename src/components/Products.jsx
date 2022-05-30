@@ -5,9 +5,8 @@ import Pagination from "./Pagination"
 import { Flex,  Grid } from '@chakra-ui/react'
 import axios from "axios"
 import { useState } from "react";
-import products from "./db.json"
 const Products = () => {
-  const [productslist,setProducts] = useState(products.products)
+  const [productslist,setProducts] = useState([])
   const [page,setPage] = useState(1)
  const [limit,setLimit] = useState(3)
   //console.log(productslist)
@@ -59,7 +58,7 @@ const Products = () => {
     </Grid>
    
     
-     <Pagination limit={limit} limitSet={limitSet} pageSet={pageSet} page={page} productslist={productslist} products={products.products}/>
+     <Pagination limit={limit} limitSet={limitSet} pageSet={pageSet} page={page} productslist={productslist}/>
     </Flex>
   );
 };
